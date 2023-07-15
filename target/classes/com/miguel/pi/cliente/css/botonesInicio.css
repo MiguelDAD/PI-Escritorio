@@ -1,0 +1,27 @@
+/* botones de inicio*/
+.menuInicio {
+    -fx-background-color: none;
+    -fx-border: none;
+    -fx-text-fill: #99005C;
+    -fx-font-size: 28px;
+}
+
+/*esto cambia el color del icono cuando se pone el raton encima */
+.menuInicio:hover > .ratonEncima{
+    -fx-fill: #FF7B00;
+}
+
+/*esto cambia el color del texto cuando se pone el raton encima */
+.menuInicio:hover{
+    -fx-text-fill: #FF7B00;    
+}
+
+.panel {
+    -fx-background-color:  #FFE25C;
+    -fx-border-color: #FFE25C #000 #FFE25C #FFE25C;
+    -fx-border-width: 2px;
+}
+
+.perfil:hover{
+    -fx-text-fill: #FF7B00;    
+}

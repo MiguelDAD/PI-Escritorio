@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import io.github.palexdev.materialfx.controls.legacy.MFXLegacyListView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="150.0" prefWidth="850.0" styleClass="tarjeta" stylesheets="@css/listView.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.miguel.pi.cliente.TarjetaEquiposController">
+   <children>
+      <Label layoutX="72.0" layoutY="26.0" text="Nombre:">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="72.0" layoutY="90.0" text="Lider:">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="nombreEquipo" layoutX="200.0" layoutY="29.0" prefHeight="30.0" prefWidth="111.0" text="Nombre:">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="liderEquipo" layoutX="200.0" layoutY="93.0" prefHeight="30.0" prefWidth="111.0" text="Nombre:">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <MFXLegacyListView fx:id="integrantesEquipo" layoutX="488.0" layoutY="18.0" prefHeight="115.0" prefWidth="319.0" />
+      <Label layoutX="339.0" layoutY="27.0" text="Integrantes:">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

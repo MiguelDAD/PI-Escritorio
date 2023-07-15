@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import io.github.palexdev.materialfx.controls.MFXPasswordField?>
+<?import io.github.palexdev.materialfx.controls.MFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.miguel.pi.cliente.RegisterController">
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Pane layoutX="415.0" layoutY="172.0" prefHeight="377.0" prefWidth="450.0" styleClass="recuadro" stylesheets="@css/inputs.css">
+               <children>
+                  <MFXTextField fx:id="usuario" floatingText="Usuario" layoutX="133.0" layoutY="116.0" prefHeight="48.0" prefWidth="202.0" />
+                  <MFXButton fx:id="butonEntrar" layoutX="101.0" layoutY="277.0" onAction="#cambiarIniciarSesion" prefHeight="40.0" prefWidth="107.0" styleClass="botonInicio" text="Iniciar Sesión" />
+                  <Label fx:id="informacion" alignment="CENTER" layoutX="26.0" layoutY="306.0" prefHeight="63.0" prefWidth="398.0" textFill="RED">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <MFXTextField fx:id="email" floatingText="Email" layoutX="133.0" layoutY="45.0" prefHeight="48.0" prefWidth="202.0" />
+                  <MFXButton fx:id="registrarBoton" layoutX="242.0" layoutY="277.0" onAction="#registrarAccion" prefHeight="40.0" prefWidth="107.0" styleClass="botonInicio" text="Registrarse" />
+                  <FontAwesomeIconView fill="#5e3e00" glyphName="ENVELOPE" layoutX="83.0" layoutY="80.0" size="32" />
+                  <FontAwesomeIconView fill="#5e3e00" glyphName="USER" layoutX="90.0" layoutY="151.0" size="32" />
+                  <FontAwesomeIconView fill="#5e3e00" glyphName="KEY" layoutX="90.0" layoutY="224.0" size="32" />
+                  <MFXPasswordField fx:id="passwd" floatingText="Contraseña" layoutX="133.0" layoutY="188.0" prefHeight="48.0" prefWidth="200.0" />
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

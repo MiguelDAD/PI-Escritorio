@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import io.github.palexdev.materialfx.controls.MFXComboBox?>
+<?import io.github.palexdev.materialfx.controls.MFXDatePicker?>
+<?import io.github.palexdev.materialfx.controls.MFXTextField?>
+<?import io.github.palexdev.materialfx.controls.legacy.MFXLegacyComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="577.0" prefWidth="757.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.miguel.pi.cliente.CrearLigaController">
+   <top>
+      <Pane prefHeight="79.0" prefWidth="623.0" style="-fx-background-color: #FFE25C;" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="14.0" layoutY="20.0" text="Crear liga">
+               <font>
+                  <Font name="System Bold" size="28.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </top>
+   <bottom>
+      <AnchorPane prefHeight="498.0" prefWidth="653.0" style="-fx-background-color: #fff;" BorderPane.alignment="CENTER">
+         <children>
+            <MFXButton fx:id="crearLigaBtn" layoutX="593.0" layoutY="436.0" onAction="#crearLigaAccion" prefHeight="48.0" prefWidth="146.0" styleClass="crear" stylesheets="@css/inputs.css" text="Crear liga">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </MFXButton>
+            <GridPane layoutX="19.0" prefHeight="423.0" prefWidth="720.0" AnchorPane.bottomAnchor="75.0" AnchorPane.leftAnchor="19.0" AnchorPane.rightAnchor="18.0" AnchorPane.topAnchor="0.0">
+              <columnConstraints>
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label text="Nombre:">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </Label>
+                  <MFXTextField fx:id="nombreLiga" floatMode="DISABLED" prefHeight="39.0" prefWidth="156.0" stylesheets="@css/inputs.css" GridPane.columnIndex="1" />
+                  <Label text="Fecha Inicio" GridPane.columnIndex="2">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </Label>
+                  <MFXDatePicker fx:id="fInicioLiga" prefHeight="38.0" prefWidth="156.0" stylesheets="@css/inputs.css" GridPane.columnIndex="3" />
+                  <Label text="Ubicación:" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </Label>
+                  <MFXTextField fx:id="ubicacionLiga" floatMode="DISABLED" prefHeight="39.0" prefWidth="156.0" stylesheets="@css/inputs.css" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <Label text="Hora Inicio" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </Label>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                     <children>
+                        <MFXLegacyComboBox fx:id="hInicioLiga" prefHeight="31.0" prefWidth="66.0" unfocusedLineColor="#4d4d4d00" />
+                        <MFXLegacyComboBox fx:id="mInicioLiga" prefHeight="31.0" prefWidth="66.0" unfocusedLineColor="#4d4d4d00" />
+                     </children>
+                  </HBox>
+                  <Label text="Coste:" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </Label>
+                  <MFXTextField fx:id="costeLiga" floatMode="DISABLED" prefHeight="39.0" prefWidth="156.0" stylesheets="@css/inputs.css" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <Label text="Fecha Limite" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </Label>
+                  <MFXDatePicker fx:id="fLimiteLiga" prefHeight="38.0" prefWidth="156.0" stylesheets="@css/inputs.css" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                  <Label text="Deporte:" GridPane.rowIndex="3">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </Label>
+                  <MFXComboBox fx:id="deporteLiga" floatMode="DISABLED" prefHeight="40.0" prefWidth="157.0" stylesheets="@css/inputs.css" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <Label text="Hora Limite" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </Label>
+                  <HBox alignment="CENTER" prefHeight="34.0" prefWidth="154.0" GridPane.columnIndex="3" GridPane.rowIndex="3">
+                     <children>
+                        <MFXLegacyComboBox fx:id="hLimiteLiga" prefHeight="31.0" prefWidth="66.0" unfocusedLineColor="#4d4d4d00" />
+                        <MFXLegacyComboBox fx:id="mLimiteLiga" prefHeight="31.0" prefWidth="66.0" unfocusedLineColor="#4d4d4d00" />
+                     </children>
+                  </HBox>
+                  <Label text="Maximos equipos:" GridPane.rowIndex="4">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </Label>
+                  <MFXComboBox fx:id="maxEquiposLiga" floatMode="DISABLED" onAction="#cambiarMinEquiposDisponibles" prefHeight="40.0" prefWidth="155.0" stylesheets="@css/inputs.css" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                  <Label text="Minimos equipos:" GridPane.columnIndex="2" GridPane.rowIndex="4">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </Label>
+                  <MFXComboBox fx:id="minEquipoLiga" floatMode="DISABLED" prefHeight="40.0" prefWidth="155.0" stylesheets="@css/inputs.css" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+                  <Label text="Frecuencia Jornada:" GridPane.rowIndex="5">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </Label>
+                  <MFXTextField fx:id="frecuenciaJornada" floatMode="BORDER" floatingText="Dias" prefHeight="39.0" prefWidth="156.0" stylesheets="@css/inputs.css" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                  <Label text="Duracion Partido:" GridPane.rowIndex="6">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </Label>
+                  <MFXTextField fx:id="duracionPartido" floatMode="BORDER" floatingText="Minutos" prefHeight="39.0" prefWidth="156.0" stylesheets="@css/inputs.css" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                  <Label prefWidth="169.0" text="Hora Inicio Partidos:" GridPane.columnIndex="2" GridPane.rowIndex="5">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </Label>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="5">
+                     <children>
+                        <MFXLegacyComboBox fx:id="hInicioPartidos" prefHeight="31.0" prefWidth="66.0" unfocusedLineColor="#4d4d4d00" />
+                        <MFXLegacyComboBox fx:id="mInicioPartidos" prefHeight="31.0" prefWidth="66.0" unfocusedLineColor="#4d4d4d00" />
+                     </children>
+                  </HBox>
+                  <Label text="Hora Fin Partidos:" GridPane.columnIndex="2" GridPane.rowIndex="6">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </Label>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="6">
+                     <children>
+                        <MFXLegacyComboBox fx:id="hFinPartidos" prefHeight="31.0" prefWidth="66.0" unfocusedLineColor="#4d4d4d00" />
+                        <MFXLegacyComboBox fx:id="mFinPartidos" prefHeight="31.0" prefWidth="66.0" unfocusedLineColor="#4d4d4d00" />
+                     </children>
+                  </HBox>
+               </children>
+            </GridPane>
+         </children>
+      </AnchorPane>
+   </bottom>
+</BorderPane>

@@ -1,0 +1,258 @@
+/*ComboBox-CHANGE BORDER*/
+.mfx-combo-box {
+	-fx-background-color: none;
+    -fx-background-radius: 5;
+    -fx-padding: 5;
+    -fx-border-color: #5E3E00;
+}
+
+/*CHANGE ARROW ICON*/
+.mfx-combo-box .caret .mfx-font-icon {
+	-mfx-color: #5E3E00;
+}
+
+/*CHANGE POPUP TEXT*/
+.mfx-combo-box .floating-text {
+	-fx-background-color: #FFB930;
+	-fx-text-fill: #5E3E00;
+}
+
+
+/*CAMBIAR EL COLOR DEL ITEM SELECCIONADO*/
+.mfx-combo-box .virtual-flow .mfx-combo-box-cell:selected {
+	-fx-background-color: derive(#FFB930, 60%);
+}
+
+/*CAMBIAR EL COLOR DEL RATON ENCIMA PARA SELECCIONAR*/
+
+
+.mfx-combo-box .virtual-flow .mfx-combo-box-cell:hover {
+	-fx-background-color: derive(#FFB930, 80%);
+}
+
+
+/*TextField.CHANGE BORDER*/
+.mfx-text-field {
+	-fx-background-color: #fff;
+    -fx-background-radius: 5;
+    -fx-padding: 5;
+    -fx-border-color: #5E3E00;
+}
+
+
+/*TextField Cuando esten desactivado*/
+.mfx-text-field:disabled  {
+	-fx-background-color: #fff;
+    -fx-background-radius: 5;
+    -fx-padding: 5;
+    -fx-border-color: rgba(0,0,0,0.2); 
+}
+.mfx-text-field .floating-text:disabled {
+	-fx-background-color: #fff;
+	-fx-text-fill: rgba(0,0,0,0.7);
+}
+
+
+/*CHANGE POPUP TEXT*/
+.mfx-text-field .floating-text {
+	-fx-background-color: #fff;
+	-fx-text-fill: #5E3E00;
+}
+
+/*CHANGE POPUP TEXT*/
+.mfx-text-field .floating-text:focus {
+	-fx-background-color: #fff;
+	-fx-text-fill: #5E3E00;
+    -fx-border-fill: #5E3E00;
+    -fx-border-color: #5E3E00;
+}
+
+/*DataPicker*/
+.mfx-date-picker{
+    -fx-background-color: #fff;
+	-fx-text-fill: #5E3E00;
+    -fx-border-fill: #5E3E00;
+
+}
+
+/*ICONO DEL CALENDAIO*/
+.mfx-date-picker .icon {
+	-mfx-color: #5E3E00;
+}
+
+/*CUANDO SELECCIONAS EL MESY AÑO EL COLOR DE FONDO*/
+.mfx-date-picker .date-picker-popup .months-combo .virtual-flow .mfx-combo-box-cell:hover,
+.mfx-date-picker .date-picker-popup .years-combo .virtual-flow .mfx-combo-box-cell:hover,
+.mfx-date-picker .date-picker-popup .months-combo .virtual-flow .mfx-combo-box-cell:selected,
+.mfx-date-picker .date-picker-popup .years-combo .virtual-flow .mfx-combo-box-cell:selected {
+
+    /*DERIVE HACE Q SE TRANSPARENTE*/
+	-fx-background-color: derive(#FFB930, 75%);
+}
+
+/*COLOR DEL TEXTO Y MES EN EL PICK*/
+.mfx-date-picker .date-picker-popup .months-combo:focus-within,
+.mfx-date-picker .date-picker-popup .years-combo:focus-within {
+	-fx-text-fill: #5E3E00;
+}
+
+.mfx-date-picker .date-picker-popup .months-combo:focus-within .caret .mfx-font-icon,
+.mfx-date-picker .date-picker-popup .years-combo:focus-within .caret .mfx-font-icon {
+	-mfx-color: #5E3E00;
+}
+
+/*numeros del calendario mes*/
+
+.mfx-date-picker .date-picker-popup .mfx-date-cell {
+	-fx-text-fill: black
+}
+
+.mfx-date-picker .date-picker-popup .mfx-date-cell:extra {
+	-fx-text-fill: rgba(0,0,0,0.5);
+}
+
+/*CIRCULO QUE MARCA EL DIA SELECCIONADO Y EL ACTUAL*/
+
+.mfx-date-picker .date-picker-popup .mfx-date-cell:current {
+	-fx-background-color: rgba(0,0,0,0.1);
+	
+}
+.mfx-date-picker .date-picker-popup .mfx-date-cell:selected {
+	-fx-background-color: derive(#5E3E00, 75%);
+	-fx-text-fill: white;
+}
+
+
+/*Label*/
+Label.etiqueta {
+    -fx-text-fill: #5E3E00;
+    -fx-font-family: "Calibri";
+    -fx-font-size: 12px;
+}
+
+/*Radio Button*/
+
+.mfx-radio-button {
+	-mfx-main: #FFB930;
+	-fx-text-fill: black
+}
+
+/*Cuando clicas el check*/
+.mfx-radio-button .mfx-ripple-generator {
+	-mfx-ripple-color: -common-gradient;
+	-fx-opacity: 0.5;
+}
+
+
+/*Input Buttons*/
+
+.mfx-checkbox {
+	-mfx-main: #FFB930;
+	-fx-text-fill: black
+}
+
+/*Cuando clicas el check*/
+.mfx-checkbox .mfx-ripple-generator {
+	-mfx-ripple-color: -common-gradient;
+	-fx-opacity: 0.5;
+}
+
+.crear{
+    -fx-background-color: #FFE25C;
+    -fx-border: none;
+    -fx-text-fill: #000;
+    -fx-border-radius: 7px;
+    -fx-border-width: 2px;
+}
+
+/*esto cambia el color del icono cuando se pone el raton encima */
+.crear:hover > .ratonEncima{
+    -fx-fill: #FF7B00;
+}
+
+/*esto cambia el color del texto cuando se pone el raton encima */
+.crear:hover{
+    -fx-text-fill: #FF7B00;    
+}
+
+.botonInicio{
+    -fx-background-color: #fff;
+    -fx-border: none;
+    -fx-text-fill: #000;
+    -fx-background-radius: 5px;
+    -fx-border-radius: 5px;
+    -fx-border-width: 1px;
+    -fx-border-color: #5E3E00;
+}
+
+.recuadro{
+    -fx-background-color: #FFE25C;
+    -fx-background-radius: 10px;
+    -fx-border-radius: 10px;
+    -fx-border-width: 2px;
+    -fx-border-color: #5E3E00;
+}
+
+/* TABLA*/
+.table-view .column-header,
+.table-view .column-header-background .filler {
+    -fx-cell-size: 20;
+    -fx-background-color: #FF9900;
+
+    /*Colocar borde derecho mas claro*/
+    -fx-border-color: #FF9900 #FFB74A #FF9900 #FF9900;
+}
+
+.table-view .column-header-background .label {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-aligment: CENTER_LEFT;
+}
+
+.table-view .cell {
+    -fx-cell-size: 30;
+    -fx-aligment: center-left;
+    -fx-text-fill: #000000;
+    -fx-alignment: CENTER_LEFT;
+}
+
+.table-view {
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+}
+
+.table-row-cell {
+    -fx-focus-color: transparent;
+}
+
+.table-row-cell:selected {
+    -fx-background-color: derive(#FF9900, 50%);
+}
+
+.table-row-cell:selected .cell {
+    -fx-border-color: transparent #FFB74A transparent transparent;
+}
+
+.table-row-cell:selected .text {
+    -fx-fill: white;
+}
+
+.buscar {
+    -fx-background-color: none;
+    -fx-border: none;
+    -fx-text-fill: #000;
+    -fx-font-family: "Calibri";
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+
+}
+
+/*esto cambia el color del icono cuando se pone el raton encima */
+.buscar:hover>.ratonEncima {
+    -fx-fill: #828282;
+}
+
+/*esto cambia el color del texto cuando se pone el raton encima */
+.buscar:hover {
+    -fx-text-fill: #828282;
+}

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="552.0" prefWidth="855.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.miguel.pi.cliente.PeticionesDeporteController">
+   <children>
+      <TableView fx:id="tablaPeticiones" layoutX="17.0" layoutY="116.0" onMousePressed="#activarBloqueo" prefHeight="422.0" prefWidth="822.0" stylesheets="@css/inputs.css">
+        <columns>
+          <TableColumn fx:id="deporte" prefWidth="112.0" text="Deporte" />
+          <TableColumn fx:id="ctdad" prefWidth="97.0" text="Cantidad  Total" />
+            <TableColumn fx:id="ctdadE" prefWidth="105.0" text="Cantidad Equipo" />
+            <TableColumn fx:id="iExtra" prefWidth="389.0" text="Informacion extra" />
+            <TableColumn fx:id="solicitante" prefWidth="113.0" text="Solicitante" />
+        </columns>
+      </TableView>
+      <MFXButton fx:id="aceptarBoton" disable="true" layoutX="721.0" layoutY="68.0" onAction="#aceptarPeticion" prefHeight="33.0" prefWidth="120.0" styleClass="crear" stylesheets="@css/inputs.css" text="Aceptar">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIconView glyphName="CHECK" size="20" styleClass="ratonEncima" />
+         </graphic>
+      </MFXButton>
+      <MFXButton fx:id="rechazarBoton" disable="true" layoutX="17.0" layoutY="68.0" onAction="#recharPeticion" prefHeight="33.0" prefWidth="120.0" styleClass="crear" stylesheets="@css/inputs.css" text="Rechazar">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIconView glyphName="CLOSE" size="20" styleClass="ratonEncima" />
+         </graphic>
+      </MFXButton>
+      <Label layoutX="17.0" layoutY="14.0" prefHeight="35.0" prefWidth="271.0" text="Peticiones:">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <AnchorPane fx:id="cargando" prefHeight="552.0" prefWidth="855.0" styleClass="fondo" stylesheets="@css/cargando.css">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="349.0" layoutY="201.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/loader.gif" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

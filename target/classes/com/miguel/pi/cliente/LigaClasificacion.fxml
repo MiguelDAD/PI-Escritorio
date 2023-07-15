@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.miguel.pi.cliente.LigaClasificacionController">
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <MFXButton fx:id="datosLiga" onAction="#cambiarPestania" prefHeight="48.0" prefWidth="159.0" style="-fx-background-color: none;" text="Datos" />
+            <MFXButton fx:id="equipoLiga" layoutX="159.0" onAction="#cambiarPestania" prefHeight="48.0" prefWidth="159.0" style="-fx-background-color: none;" text="Equipo" />
+            <MFXButton fx:id="clasificacionLiga" layoutX="477.0" layoutY="1.0" onAction="#cambiarPestania" prefHeight="48.0" prefWidth="159.0" text="Clasificacion" />
+            <MFXButton fx:id="jornadasLiga" layoutX="318.0" onAction="#cambiarPestania" prefHeight="48.0" prefWidth="159.0" style="-fx-background-color: none;" text="Jornadas" />
+            <AnchorPane layoutY="48.0" prefHeight="672.0" prefWidth="1039.0" style="-fx-background-color: #FFF;">
+               <children>
+                  <Label layoutX="14.0" layoutY="14.0" prefHeight="35.0" prefWidth="271.0" text="Clasificacionde la liga:">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <TableView fx:id="tablaLiga" layoutX="160.0" layoutY="109.0" prefHeight="435.0" prefWidth="720.0" stylesheets="@css/inputs.css">
+                    <columns>
+                      <TableColumn fx:id="equipoColumna" prefWidth="212.0" text="Equipo" />
+                      <TableColumn fx:id="partidosJugadosColumna" minWidth="0.0" prefWidth="51.0" text="PJ" />
+                        <TableColumn fx:id="puntosColumna" minWidth="0.0" prefWidth="51.0" text="Puntos" />
+                        <TableColumn fx:id="puntosFavorColumna" minWidth="0.0" prefWidth="118.0" text="Puntuacion a favor" />
+                        <TableColumn fx:id="puntosContraColumna" minWidth="0.0" prefWidth="140.0" text="Puntuacion en contra" />
+                        <TableColumn fx:id="diferenciaColumna" minWidth="0.0" prefWidth="140.0" text="Diferencia" />
+                    </columns>
+                  </TableView>
+                  <MFXButton fx:id="finalizarBoton" layoutX="928.0" layoutY="593.0" onAction="#finalizarLiga" prefHeight="33.0" prefWidth="102.0" styleClass="crear" stylesheets="@css/inputs.css" text="Finalizar">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </MFXButton>
+               </children>
+            </AnchorPane>
+            <Label fx:id="nombreLigaCabezera" alignment="CENTER_RIGHT" layoutX="705.0" layoutY="7.0" prefHeight="35.0" prefWidth="320.0" text="X">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </center>
+   <left>
+      <AnchorPane prefHeight="720.0" prefWidth="241.0" styleClass="panel" stylesheets="@css/botonesInicio.css" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="14.0" layoutY="14.0" text="Hola,">
+               <font>
+                  <Font name="System Bold" size="34.0" />
+               </font>
+            </Label>
+            <Label fx:id="nombreUusario" layoutX="16.0" layoutY="64.0" prefHeight="35.0" prefWidth="220.0" text="X">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <MFXButton fx:id="btnTorneo" layoutY="153.0" onAction="#cambiarPanel" prefHeight="58.0" prefWidth="161.0" styleClass="menuInicio" stylesheets="@css/botonesInicio.css" text="Torneo">
+               <graphic>
+                  <FontAwesomeIconView fill="#99005c" glyphName="TROPHY" size="25" styleClass="ratonEncima" />
+               </graphic>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </MFXButton>
+            <MFXButton fx:id="btnLiga" layoutY="211.0" onAction="#cambiarPanel" prefHeight="58.0" styleClass="menuInicio" stylesheets="@css/botonesInicio.css" text="Liga">
+               <graphic>
+                  <FontAwesomeIconView fill="#99005c" glyphName="LIST" size="25" styleClass="ratonEncima" />
+               </graphic>
+            </MFXButton>
+            <Label layoutX="7.0" layoutY="698.0" style="-fx-text-fill: #E2BA00;" text="Organizador" AnchorPane.bottomAnchor="5.0" />
+            <Label fx:id="version" layoutX="163.0" layoutY="698.0" style="-fx-text-fill: #E2BA00;" text="Pre-Alpha 0.1" AnchorPane.bottomAnchor="5.0" />
+            <VBox alignment="CENTER" layoutX="47.0" layoutY="498.0" prefHeight="200.0" prefWidth="100.0" spacing="15.0">
+               <children>
+                  <ImageView fitHeight="138.0" fitWidth="138.0">
+                     <image>
+                        <Image url="@img/logo.png" />
+                     </image>
+                  </ImageView>
+                  <Label text="Basilisk">
+                     <font>
+                        <Font name="Calibri Bold Italic" size="25.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </left>
+</BorderPane>
